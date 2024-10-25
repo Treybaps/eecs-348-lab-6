@@ -1,0 +1,40 @@
+<html> 
+
+<head> 
+
+    <title>Simple Multiplication Table</title> 
+
+</head> 
+
+<body> 
+
+    <form method="post"> 
+
+        <label>Enter a number:</label> 
+
+        <input type="number" name="number" min="1"> 
+
+        <button type="submit">Show Table</button> 
+
+    </form> 
+
+  
+
+    <?php 
+
+        if (isset($_POST["number"])) { 
+            $num = $_POST["number"]; 
+            
+            echo "<h3>Multiplication Table for $num</h3>"; 
+
+            for ($i = 1; $i <= $num; $i++) { 
+                for ($j = 1; $j <= $num; $j++) { 
+                    echo $i * $j . " "; 
+                } 
+                echo "<br>"; 
+            } 
+        } 
+    ?> 
+</body> 
+
+</html>
